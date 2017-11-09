@@ -15,10 +15,10 @@ twoWaysMap :: MappableInTwoDifferentWays f
            => (a -> c) -> (b -> d) -> f a b -> f c d
 twoWaysMap = bimap
 
-mapAccorrdingToTheFirstParameter :: MappableInTwoDifferentWays f
+mapAccordingToTheFirstParameter :: MappableInTwoDifferentWays f
                                  => (a -> c) -> f a b -> f c b
-mapAccorrdingToTheFirstParameter = first
+mapAccordingToTheFirstParameter = first
 
-mapAccorrdingToTheSecondParameter :: MappableInTwoDifferentWays f
+mapAccordingToTheSecondParameter :: MappableInTwoDifferentWays f
                                  => (b -> d) -> f a b -> f a d
-mapAccorrdingToTheSecondParameter = second
+mapAccordingToTheSecondParameter = second
