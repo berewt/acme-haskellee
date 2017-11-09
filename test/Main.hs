@@ -5,6 +5,7 @@ import Test.Tasty.Hspec
 import Acme.HaskellEE.Composable
 import Acme.HaskellEE.Bindable
 import Acme.HaskellEE.Mappable
+import Acme.HaskellEE.MappableInTwoDifferentWays
 
 main :: IO ()
 main = do
@@ -20,3 +21,9 @@ spec = parallel $ do
         composeAll ["He", "ll", "o"] `shouldBe` "Hello"
     it "bind an applicative" $ do
         bind "Hello" `shouldBe` Just "Hello"
+    it "twoWaysMap a bifunctor" $ do
+        twoWaysMap length tail ("Hello", "World") `shouldBe` (5, "orld")
+    it "mapAccorrdingToTheFirstParameter a bifunctor" $ do
+        mapAccorrdingToTheFirstParameter length ("Hello", "World") `shouldBe` (5, "World")
+    it "mapAccorrdingToTheSecondParameter a bifunctor" $ do
+        mapAccorrdingToTheSecondParameter tail ("Hello", "World") `shouldBe` ("Hello", "orld")
