@@ -23,7 +23,7 @@ spec = parallel $ do
         bind "Hello" `shouldBe` Just "Hello"
     it "twoWaysMap a bifunctor" $ do
         twoWaysMap length tail ("Hello", "World") `shouldBe` (5, "orld")
-    it "mapAccorrdingToTheFirstParameter a bifunctor" $ do
-        mapAccorrdingToTheFirstParameter length ("Hello", "World") `shouldBe` (5, "World")
-    it "mapAccorrdingToTheSecondParameter a bifunctor" $ do
-        mapAccorrdingToTheSecondParameter tail ("Hello", "World") `shouldBe` ("Hello", "orld")
+    it "mapAccordingToTheFirstParameter a bifunctor" $ do
+        mapAccordingToTheFirstParameter length ("Hello", "World") `shouldBe` (5, "World")
+    it "mapAccordingToTheSecondParameter a bifunctor" $ do
+        mapAccordingToTheSecondParameter tail ("Hello", "World") `shouldBe` ("Hello", "orld")
