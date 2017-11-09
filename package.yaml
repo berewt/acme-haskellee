@@ -1,0 +1,32 @@
+category: Other
+description: Bring Haskell to an Enterprise Edition level
+extra-source-files:
+- CHANGELOG.md
+- LICENSE.md
+- package.yaml
+- README.md
+- stack.yaml
+ghc-options: -Wall
+github: berewt/acme-haskellee
+library:
+  dependencies:
+  - base
+  source-dirs: src
+license: MIT
+maintainer: Nicolas Biri <nicolas@biri.name>
+name: acme-haskellee
+synopsis: Commercial name for well known concepts
+tests:
+  acme-haskellee-test-suite:
+    dependencies:
+    - base
+    - acme-haskellee
+    - tasty
+    - tasty-hspec
+    ghc-options:
+    - -rtsopts
+    - -threaded
+    - -with-rtsopts=-N
+    main: Main.hs
+    source-dirs: test
+version: '0.0.1'
