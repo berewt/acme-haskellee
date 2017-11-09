@@ -1,4 +1,4 @@
-category: Other
+category: acme
 description: Bring Haskell to an Enterprise Edition level
 extra-source-files:
 - CHANGELOG.md
