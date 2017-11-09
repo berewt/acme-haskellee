@@ -2,7 +2,9 @@ import qualified Test.Tasty
 
 import Test.Tasty.Hspec
 
-import Acme.Haskell.EE
+import Acme.HaskellEE.Composable
+import Acme.HaskellEE.Bindable
+import Acme.HaskellEE.Mappable
 
 main :: IO ()
 main = do
