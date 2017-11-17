@@ -2,6 +2,7 @@
 
 module Acme.HaskellEE.MappableInTwoDifferentWays
   ( MappableInTwoDifferentWays
+  , MappableInBothWays
   , twoWaysMap
   , mapAccorrdingToTheFirstParameter
   , mapAccorrdingToTheSecondParameter
@@ -10,6 +11,7 @@ module Acme.HaskellEE.MappableInTwoDifferentWays
 import Data.Bifunctor
 
 type MappableInTwoDifferentWays = Bifunctor
+type MappableInBothWays         = Bifunctor
 
 twoWaysMap :: MappableInTwoDifferentWays f
            => (a -> c) -> (b -> d) -> f a b -> f c d
