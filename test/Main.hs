@@ -6,6 +6,7 @@ import Acme.HaskellEE.Composable
 import Acme.HaskellEE.Bindable
 import Acme.HaskellEE.Mappable
 import Acme.HaskellEE.MappableInTwoDifferentWays
+import Acme.HaskellEE.Sequenceable
 
 main :: IO ()
 main = do
@@ -27,3 +28,7 @@ spec = parallel $ do
         mapAccordingToTheFirstParameter length ("Hello", "World") `shouldBe` (5, "World")
     it "mapAccordingToTheSecondParameter a bifunctor" $ do
         mapAccordingToTheSecondParameter tail ("Hello", "World") `shouldBe` ("Hello", "orld")
+    it "can flatten sequenceable" $ do
+      flatten [[1,2],[3]] `shouldBe` [1,2,3]
+    it "andThen chain actions" $ do
+        ([[1,2],[3]] `andThen` (flip replicate () . length)) `shouldBe` [(),(),()]

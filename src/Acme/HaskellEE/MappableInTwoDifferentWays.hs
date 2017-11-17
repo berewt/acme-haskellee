@@ -4,8 +4,8 @@ module Acme.HaskellEE.MappableInTwoDifferentWays
   ( MappableInTwoDifferentWays
   , MappableInBothWays
   , twoWaysMap
-  , mapAccorrdingToTheFirstParameter
-  , mapAccorrdingToTheSecondParameter
+  , mapAccordingToTheFirstParameter
+  , mapAccordingToTheSecondParameter
   ) where
 
 import Data.Bifunctor
